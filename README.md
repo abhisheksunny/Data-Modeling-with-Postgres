@@ -23,18 +23,26 @@ Converting log and data files to properly formatted and segregated tables would 
 ***
 
 ## Data Ingestion
-<b>Song File - </b> The data within this File is used to populate `songs` and `artists` tables.
+<b>Song File - </b> The data within this File is used to populate `songs` and `artists` tables.  
 
-![Sample LOG File](/home/workspace/Images/log_file.png)
-![Songs Table](/home/workspace/Images/songs-table.JPG)
-![Artists Table](/home/workspace/Images/artists-table.JPG)
+* Sample LOG File -  
+![Sample LOG File](Images/log_file.png)
+* Songs Table - 
+![Songs Table](Images/songs-table.JPG)
+* Artists Table - 
+![Artists Table](Images/artists-table.JPG)
 
 
 <b>Log File - </b> Copy command is used for ingesting this file. Due to this JSON data has been cleared up using `sed` linux replace command for replacing all the `"\"` to `"` and then the new modified files are used to populate a temorary table `log_data_json` with one file at a time loading to the temp table and then deleting in the next iteration. The data from files is used directly to populate `time` table and data from the temporary table `log_data_json` is used to populate `users` and `songplays` directly from Postgres.
-
-![Sample Song File](/home/workspace/Images/song_file.JPG)
-![Time Table](/home/workspace/Images/time-table.JPG)
-![Users Table](/home/workspace/Images/users-table.JPG)
-![SongPlays Table](/home/workspace/Images/songplays_table.JPG)
+    
+    
+* Sample Song File -  
+![Sample Song File](Images/song_file.JPG)
+* Time Table -  
+![Time Table](Images/time-table.JPG)
+* Users Table -  
+![Users Table](Images/users-table.JPG)
+* SongPlays Table -    
+![SongPlays Table](Images/songplays_table.JPG)
 
 ***
